@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thillana 2026 | Cultural Fest</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* BODY BACKGROUND */
+
+body{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+background:
+linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
+url("images/POSTER THILLANA.png");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
+
+color:white;
+
+border:5px solid gold;
+
+animation:borderGlow 5s infinite;
+
+min-height:100vh;
+
+position:relative;
+
+}
+
+/* GOLD BORDER GLOW */
+
+@keyframes borderGlow{
+
+0%{
+box-shadow:0 0 10px gold;
+}
+
+50%{
+box-shadow:0 0 25px gold;
+}
+
+100%{
+box-shadow:0 0 10px gold;
+}
+
+}
+
+/* CULTURAL VECTOR OVERLAY */
+
+body::before{
+
+content:"";
+position:fixed;
+
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background-image:
+url("https://www.svgrepo.com/show/309548/mandala.svg"),
+url("https://www.svgrepo.com/show/472842/peacock.svg");
+
+background-size:600px,350px;
+
+background-repeat:no-repeat,no-repeat;
+
+background-position:
+left 100px top 200px,
+right 100px bottom 200px;
+
+opacity:0.06;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+/* OPTIONAL GOLD PARTICLE EFFECT */
+
+body::after{
+
+content:"";
+position:fixed;
+
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background-image:
+radial-gradient(gold 1px, transparent 1px);
+
+background-size:60px 60px;
+
+opacity:0.03;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+@keyframes borderGlow{
+0%{box-shadow:0 0 10px gold}
+50%{box-shadow:0 0 25px gold}
+100%{box-shadow:0 0 10px gold}
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+position:absolute;
+width:100%;
+z-index:10;
+}
+
+.college-name{
+font-size:22px;
+font-weight:600;
+color:#d4af37;
+}
+
+nav a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+cursor:pointer;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url("images/CLG.jpeg");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:80px;
+background:linear-gradient(90deg,#f7d774,#d4af37,#b8962e);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:10px;
+color:#ddd;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 32px;
+border-radius:30px;
+background:linear-gradient(145deg,#f7d774,#d4af37,#b8962e);
+color:black;
+font-weight:600;
+text-decoration:none;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px gold;
+}
+
+/* SECTION */
+
+section{
+padding:80px 10%;
+text-align:center;
+}
+
+h2{
+color:#d4af37;
+margin-bottom:25px;
+}
+
+/* NOTICE */
+
+.notice{
+background:#151515;
+padding:20px;
+border-radius:10px;
+border:1px solid gold;
+max-width:700px;
+margin:auto;
+}
+
+/* PRIZES */
+
+.prizes{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.prize-card{
+background:#151515;
+padding:25px;
+border-radius:10px;
+border:1px solid gold;
+width:220px;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:25px;
+margin-top:30px;
+}
+
+.time-box{
+background:#151515;
+padding:20px;
+border-radius:10px;
+border:1px solid gold;
+width:120px;
+font-size:22px;
+}
+
+/* EVENTS */
+
+.event-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.event-card{
+background:#151515;
+border-radius:12px;
+border:1px solid gold;
+cursor:pointer;
+transition:0.4s;
+}
+
+.event-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(212,175,55,0.6);
+}
+
+.event-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px 12px 0 0;
+}
+
+.event-card h3{
+padding:15px;
+color:#f7d774;
+}
+
+/* GALLERY */
+
+.gallery{
+
+overflow:hidden;
+max-width:1000px;
+margin:auto;
+border:2px solid gold;
+border-radius:10px;
+
+}
+
+.gallery-track{
+
+display:flex;
+gap:20px;
+
+animation:scrollGallery 25s linear infinite;
+
+}
+
+.gallery-track img{
+
+height:220px;
+border-radius:8px;
+border:2px solid gold;
+
+}
+
+/* AUTO SCROLL */
+
+@keyframes scrollGallery{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.modal-content{
+background:#111;
+padding:30px;
+border-radius:10px;
+max-width:700px;
+width:90%;
+max-height:80vh;
+overflow:auto;
+border:1px solid gold;
+}
+
+.close{
+float:right;
+font-size:22px;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid gold;
+margin-top:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+.event-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+.event-grid{
+grid-template-columns:1fr;
+}
+.hero h1{
+font-size:50px;
+}
+}
+
+/* LIVE STREAM */
+
+.live-section{
+
+text-align:center;
+padding:80px 10%;
+
+}
+
+.live-container{
+
+max-width:900px;
+margin:auto;
+
+border:2px solid gold;
+border-radius:12px;
+overflow:hidden;
+
+box-shadow:0 0 25px rgba(212,175,55,0.6);
+
+}
+/* FOOTER */
+
+footer{
+
+background:rgba(0,0,0,0.8);
+padding:50px 10%;
+text-align:center;
+
+border-top:2px solid gold;
+
+margin-top:60px;
+
+}
+
+.footer-content h3{
+
+color:#d4af37;
+margin-bottom:10px;
+
+}
+
+.footer-content p{
+
+color:#ccc;
+margin-bottom:20px;
+
+}
+
+.social-links{
+
+margin-top:10px;
+
+}
+
+.social-links a{
+
+margin:0 15px;
+text-decoration:none;
+color:#d4af37;
+font-weight:600;
+font-size:16px;
+
+transition:0.3s;
+
+}
+
+.social-links a:hover{
+
+color:white;
+text-shadow:0 0 10px gold;
+
+}
+
+.copyright{
+
+margin-top:30px;
+font-size:14px;
+color:#aaa;
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="college-name">
+Saint Mary's Syrian College, Brahmavar
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#events">Events</a>
+<a onclick="openAbout()">About</a>
+<a onclick="openContact()">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+<h1>THILLANA</h1>
+<p>A Celebration of Culture, Creativity and Performance</p>
+<a href="#events" class="btn">Explore Events</a>
+</div>
+
+</section>
+<!-- COUNTDOWN -->
+
+<section>
+
+<h2>Event Countdown</h2>
+
+<div class="countdown">
+
+<div class="time-box">
+<span id="days">0</span><br>Days
+</div>
+
+<div class="time-box">
+<span id="hours">0</span><br>Hours
+</div>
+
+<div class="time-box">
+<span id="minutes">0</span><br>Minutes
+</div>
+
+<div class="time-box">
+<span id="seconds">0</span><br>Seconds
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- EVENTS -->
+
+<section id="events">
+
+<h2>Events</h2>
+
+<div class="event-grid">
+
+<div class="event-card" onclick="openModal('general','ಸಂಗೀತ ')">
+<img src="images/MUSIC.png">
+<h3>ಸಂಗೀತ </h3>
+</div>
+
+<div class="event-card" onclick="openModal('general','ನೃತ್ಯ')">
+<img src="images/dance.png">
+<h3>ನೃತ್ಯ</h3>
+</div>
+
+<div class="event-card" onclick="openModal('general',' ನಟನೆ ')">
+<img src="images/DRAMA.png">
+<h3>ನಟನೆ </h3>
+</div>
+
+<div class="event-card" onclick="openModal('general','ಅಭಿವ್ಯಕ್ತಿ')">
+<img src="images/EXPRESSION.png">
+<h3>ಅಭಿವ್ಯಕ್ತಿ</h3>
+</div>
+
+<div class="event-card" onclick="openModal('general','ಸೃಜನಾತ್ಮಕತೆ')">
+<img src="images/CREATIVE.png">
+<h3>ಸೃಜನಾತ್ಮಕತೆ</h3>
+</div>
+
+<div class="event-card" onclick="openModal('general','ನಿರೂಪಣೆ')">
+<img src="images/nirupane.png">
+<h3>ನಿರೂಪಣೆ</h3>
+</div>
+
+<div class="event-card" onclick="openModal('reel','Reel Making')">
+<img src="images/reels.png">
+<h3>Reel Making</h3>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRIZE -->
+
+<section>
+
+<h2>Prize Money</h2>
+
+<div class="prizes">
+
+<div class="prize-card">
+<h3>1st Prize</h3>
+<p>₹13,333 + Trophy</p>
+</div>
+
+<div class="prize-card">
+<h3>2nd Prize</h3>
+<p>₹11,111 + Trophy</p>
+</div>
+
+<div class="prize-card">
+<h3>3rd Prize</h3>
+<p>₹9,999 + Trophy</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NOTICE -->
+
+<section>
+
+<div class="notice">
+<h2>No Entry Fee</h2>
+<p>This cultural fest is completely free for participating colleges.</p>
+<p>Last day for registration process is 18-03-2026.</p>
+</div>
+
+</section>
+
+<!-- REGISTER -->
+
+<section>
+
+<h2>Register for Thillana 2026</h2>
+<a href="YOUR_GOOGLE_FORM_LINK" class="btn">Register Now</a>
+
+</section>
+
+
+
+<!-- YOUTUBE LIVE STREAM -->
+
+<section class="live-section">
+
+<h2>Watch Thillana Live</h2>
+
+<div class="live-container">
+
+<iframe 
+width="100%" 
+height="450"
+src="https://youtube.com/live/VyQBBfiGuiE?feature=share"
+title="Thillana Live Stream"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section>
+
+<h2>Event Gallery</h2>
+
+<div class="gallery">
+
+<div class="gallery-track">
+
+<img src="images/g1.jpg">
+<img src="images/g2.jpg">
+<img src="images/g3.jpg">
+<img src="images/g4.jpg">
+<img src="images/g5.jpg">
+<img src="images/g6.jpg">
+<img src="images/g7.jpg">
+<img src="images/g8.jpg">
+<img src="images/g9.jpg">
+<img src="images/g10.jpg">
+<img src="images/g11.jpg">
+<img src="images/g12.jpg">
+<img src="images/g13.jpg">
+<img src="images/g14.jpg">
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MODAL -->
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">✖</span>
+
+<div id="modal-body"></div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<div class="footer-content">
+
+<h3>Saint Mary's Syrian College, Brahmavar</h3>
+
+<p>Thillana 2026 – A Celebration of Culture, Creativity and Performance</p>
+
+<div class="social-links">
+
+<a href="https://www.instagram.com/sms.college/" target="_blank">
+Instagram
+</a>
+
+<a href="https://www.facebook.com/smsclgbrahmavara/" target="_blank">
+Facebook
+</a>
+
+<a href="https://www.youtube.com/@smscollegelive" target="_blank">
+YouTube
+</a>
+
+</div>
+
+</div>
+
+<p class="copyright">
+© 2026 Saint Mary's Syrian College, Brahmavar
+</p>
+
+</footer>
+
+<script>
+
+/* COUNTDOWN */
+
+var eventDate = new Date("Mar 24, 2026 09:00:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+var distance = eventDate - now;
+
+document.getElementById("days").innerHTML=Math.floor(distance/(1000*60*60*24));
+document.getElementById("hours").innerHTML=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+document.getElementById("minutes").innerHTML=Math.floor((distance%(1000*60*60))/(1000*60));
+document.getElementById("seconds").innerHTML=Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+
+/* EVENT RULES */
+
+function openModal(type,event){
+
+let rules="";
+
+if(type==="general"){
+
+rules=`
+
+<h2>${event} Rules</h2>
+
+<ul>
+<li>Each college may send only one team.</li>
+<li>Participants must carry College ID and deputation letter.</li>
+<li>Teams must report by 10:00 AM.</li>
+<li>Maximum participants per team: 20.</li>
+<li>Performance duration: 18 minutes.</li>
+<li>Stage setup time: 2 minutes.</li>
+<li>Both classical and contemporary styles allowed.</li>
+<li>No hazardous materials allowed.</li>
+</ul>
+
+`;
+
+}
+
+if(type==="reel"){
+
+rules=`
+
+<h2>🎥 Reel Making Competition</h2>
+
+<ul>
+<li>Submit reel before 3:00 PM.</li>
+<li>Collaborate with @sms.college and @sms.swc.</li>
+<li>Individual participation only.</li>
+<li>Judged based on creativity and concept.</li>
+<li>Views and likes not considered.</li>
+<li>No offensive or political content.</li>
+</ul>
+
+`;
+
+}
+
+document.getElementById("modal-body").innerHTML=rules;
+document.getElementById("modal").style.display="flex";
+
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+
+/* ABOUT */
+
+function openAbout(){
+
+document.getElementById("modal-body").innerHTML=`
+
+<h2>About Thillana</h2>
+
+<p>
+Thillana is a prestigious intercollegiate cultural festival organized by 
+Saint Mary's Syrian College, Brahmavar.
+
+The event celebrates creativity through dance, drama, music, expression and digital arts while promoting cultural unity among colleges.
+
+Students from different institutions participate and compete for the overall championship.
+</p>
+
+`;
+
+document.getElementById("modal").style.display="flex";
+
+}
+
+
+/* CONTACT */
+
+function openContact(){
+
+document.getElementById("modal-body").innerHTML=`
+
+<h2>Contact</h2>
+
+<p>
+Prashantha Shetty – 9481922969
+</p>
+
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Email">
+<textarea placeholder="Message"></textarea>
+
+<button class="btn">Send Message</button>
+
+`;
+
+document.getElementById("modal").style.display="flex";
+
+}
+
+
+/* GALLERY AUTO SLIDER */
+
+let slides=document.querySelectorAll(".gallery img");
+let index=0;
+
+setInterval(function(){
+
+slides[index].classList.remove("active");
+
+index=(index+1)%slides.length;
+
+slides[index].classList.add("active");
+
+},3000);
+
+</script>
+
+</body>
+</html>
