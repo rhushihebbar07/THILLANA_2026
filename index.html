@@ -16,15 +16,12 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 /* BODY BACKGROUND */
 
 body{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
 
 background:
 linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
@@ -33,7 +30,6 @@ url("images/POSTER THILLANA.png");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-background-repeat:no-repeat;
 
 color:white;
 
@@ -47,33 +43,25 @@ position:relative;
 
 }
 
-/* GOLD BORDER GLOW */
+/* GOLD BORDER */
 
 @keyframes borderGlow{
 
-0%{
-box-shadow:0 0 10px gold;
-}
-
-50%{
-box-shadow:0 0 25px gold;
-}
-
-100%{
-box-shadow:0 0 10px gold;
-}
+0%{box-shadow:0 0 10px gold;}
+50%{box-shadow:0 0 25px gold;}
+100%{box-shadow:0 0 10px gold;}
 
 }
 
-/* CULTURAL VECTOR OVERLAY */
+/* CULTURAL VECTOR */
 
 body::before{
 
 content:"";
 position:fixed;
-
 top:0;
 left:0;
+
 width:100%;
 height:100%;
 
@@ -97,201 +85,279 @@ z-index:-1;
 
 }
 
-/* OPTIONAL GOLD PARTICLE EFFECT */
-
-body::after{
-
-content:"";
-position:fixed;
-
-top:0;
-left:0;
-width:100%;
-height:100%;
-
-background-image:
-radial-gradient(gold 1px, transparent 1px);
-
-background-size:60px 60px;
-
-opacity:0.03;
-
-pointer-events:none;
-
-z-index:-1;
-
-}
-@keyframes borderGlow{
-0%{box-shadow:0 0 10px gold}
-50%{box-shadow:0 0 25px gold}
-100%{box-shadow:0 0 10px gold}
-}
-
 /* HEADER */
 
 header{
+
 display:flex;
 justify-content:space-between;
 align-items:center;
+
 padding:20px 60px;
+
 position:absolute;
 width:100%;
 z-index:10;
+
+backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.4);
+
 }
 
+/* COLLEGE NAME */
+
 .college-name{
+
 font-size:22px;
 font-weight:600;
 color:#d4af37;
+
+}
+
+/* NAV */
+
+nav{
+
+display:flex;
+gap:30px;
+
 }
 
 nav a{
-margin-left:25px;
-color:white;
+
 text-decoration:none;
-cursor:pointer;
+color:white;
+font-size:16px;
+transition:0.3s;
+
 }
 
 nav a:hover{
+
 color:#d4af37;
+
+}
+
+nav a:visited{
+color:white;
+}
+
+/* HAMBURGER */
+
+.menu-toggle{
+
+display:none;
+font-size:28px;
+cursor:pointer;
+color:#d4af37;
+
 }
 
 /* HERO */
 
 .hero{
+
 height:100vh;
+
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+
 background:
 linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
 url("images/CLG.jpeg");
+
 background-size:cover;
 background-position:center;
+
 }
 
 .hero h1{
+
 font-size:80px;
+
 background:linear-gradient(90deg,#f7d774,#d4af37,#b8962e);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+
 }
 
 .hero p{
+
 margin-top:10px;
 color:#ddd;
+
 }
 
 /* BUTTON */
 
 .btn{
+
 display:inline-block;
+
 margin-top:20px;
 padding:12px 32px;
+
 border-radius:30px;
+
 background:linear-gradient(145deg,#f7d774,#d4af37,#b8962e);
+
 color:black;
 font-weight:600;
 text-decoration:none;
+
+transition:0.3s;
+
 }
 
 .btn:hover{
+
 transform:scale(1.1);
 box-shadow:0 0 20px gold;
+
 }
 
 /* SECTION */
 
 section{
+
 padding:80px 10%;
 text-align:center;
+
 }
 
 h2{
+
 color:#d4af37;
 margin-bottom:25px;
+
 }
 
 /* NOTICE */
 
 .notice{
+
 background:#151515;
 padding:20px;
+
 border-radius:10px;
 border:1px solid gold;
+
 max-width:700px;
 margin:auto;
+
 }
 
 /* PRIZES */
 
 .prizes{
+
 display:flex;
 justify-content:center;
 gap:30px;
 flex-wrap:wrap;
+
 }
 
 .prize-card{
+
 background:#151515;
+
 padding:25px;
+
 border-radius:10px;
+
 border:1px solid gold;
+
 width:220px;
+
 }
 
 /* COUNTDOWN */
 
 .countdown{
+
 display:flex;
 justify-content:center;
+
 gap:25px;
+
 margin-top:30px;
+
 }
 
 .time-box{
+
 background:#151515;
+
 padding:20px;
+
 border-radius:10px;
+
 border:1px solid gold;
+
 width:120px;
+
 font-size:22px;
+
 }
 
 /* EVENTS */
 
 .event-grid{
+
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:30px;
+
 max-width:1000px;
+
 margin:auto;
+
 }
 
 .event-card{
+
 background:#151515;
+
 border-radius:12px;
+
 border:1px solid gold;
+
 cursor:pointer;
+
 transition:0.4s;
+
 }
 
 .event-card:hover{
+
 transform:translateY(-10px);
+
 box-shadow:0 0 25px rgba(212,175,55,0.6);
+
 }
 
 .event-card img{
+
 width:100%;
 height:200px;
+
 object-fit:cover;
+
 border-radius:12px 12px 0 0;
+
 }
 
 .event-card h3{
+
 padding:15px;
+
 color:#f7d774;
+
 }
 
 /* GALLERY */
@@ -299,9 +365,13 @@ color:#f7d774;
 .gallery{
 
 overflow:hidden;
+
 max-width:1000px;
+
 margin:auto;
+
 border:2px solid gold;
+
 border-radius:10px;
 
 }
@@ -309,116 +379,117 @@ border-radius:10px;
 .gallery-track{
 
 display:flex;
+
 gap:20px;
 
-animation:scrollGallery 25s linear infinite;
+animation:scrollGallery 30s linear infinite;
+
+}
+
+.gallery-track:hover{
+
+animation-play-state:paused;
 
 }
 
 .gallery-track img{
 
 height:220px;
+
 border-radius:8px;
+
 border:2px solid gold;
 
 }
 
-/* AUTO SCROLL */
+/* GALLERY ANIMATION */
 
 @keyframes scrollGallery{
 
-0%{
-transform:translateX(0);
-}
-
-100%{
-transform:translateX(-50%);
-}
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
 
 }
+
 /* MODAL */
 
 .modal{
+
 display:none;
+
 position:fixed;
+
 left:0;
 top:0;
+
 width:100%;
 height:100%;
+
 background:rgba(0,0,0,0.9);
+
 justify-content:center;
 align-items:center;
+
 z-index:1000;
+
 }
 
 .modal-content{
+
 background:#111;
+
 padding:30px;
+
 border-radius:10px;
+
 max-width:700px;
+
 width:90%;
+
 max-height:80vh;
+
 overflow:auto;
+
 border:1px solid gold;
+
 }
 
 .close{
+
 float:right;
+
 font-size:22px;
+
 cursor:pointer;
-}
 
-footer{
-text-align:center;
-padding:40px;
-border-top:1px solid gold;
-margin-top:50px;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-.event-grid{
-grid-template-columns:repeat(2,1fr);
-}
-}
-
-@media(max-width:600px){
-.event-grid{
-grid-template-columns:1fr;
-}
-.hero h1{
-font-size:50px;
-}
 }
 
 /* LIVE STREAM */
 
-.live-section{
-
-text-align:center;
-padding:80px 10%;
-
-}
-
 .live-container{
 
 max-width:900px;
+
 margin:auto;
 
 border:2px solid gold;
+
 border-radius:12px;
+
 overflow:hidden;
 
 box-shadow:0 0 25px rgba(212,175,55,0.6);
 
 }
+
 /* FOOTER */
 
 footer{
 
 background:rgba(0,0,0,0.8);
+
 padding:50px 10%;
+
 text-align:center;
 
 border-top:2px solid gold;
@@ -430,6 +501,7 @@ margin-top:60px;
 .footer-content h3{
 
 color:#d4af37;
+
 margin-bottom:10px;
 
 }
@@ -437,23 +509,20 @@ margin-bottom:10px;
 .footer-content p{
 
 color:#ccc;
+
 margin-bottom:20px;
-
-}
-
-.social-links{
-
-margin-top:10px;
 
 }
 
 .social-links a{
 
 margin:0 15px;
+
 text-decoration:none;
+
 color:#d4af37;
+
 font-weight:600;
-font-size:16px;
 
 transition:0.3s;
 
@@ -462,6 +531,7 @@ transition:0.3s;
 .social-links a:hover{
 
 color:white;
+
 text-shadow:0 0 10px gold;
 
 }
@@ -469,22 +539,109 @@ text-shadow:0 0 10px gold;
 .copyright{
 
 margin-top:30px;
+
 font-size:14px;
+
 color:#aaa;
 
 }
+
+/* TABLET */
+
+@media(max-width:900px){
+
+.event-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+padding:15px 20px;
+}
+
+nav{
+
+position:absolute;
+
+top:70px;
+left:0;
+
+width:100%;
+
+background:#000;
+
+display:none;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:20px 0;
+
+}
+
+nav a{
+
+display:block;
+
+margin:15px 0;
+
+font-size:18px;
+
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.gallery-track img{
+height:160px;
+}
+
+.countdown{
+flex-wrap:wrap;
+}
+
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:500px){
+
+.event-grid{
+grid-template-columns:1fr;
+}
+
+section{
+padding:60px 6%;
+}
+
+}
+
 </style>
 </head>
 
 <body>
-
 <header>
 
 <div class="college-name">
 Saint Mary's Syrian College, Brahmavar
 </div>
 
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<nav id="nav-menu">
 <a href="#">Home</a>
 <a href="#events">Events</a>
 <a onclick="openAbout()">About</a>
@@ -707,7 +864,17 @@ YouTube
 </footer>
 
 <script>
+function toggleMenu(){
 
+let menu = document.getElementById("nav-menu");
+
+if(menu.style.display === "flex"){
+menu.style.display = "none";
+}else{
+menu.style.display = "flex";
+}
+
+}
 /* COUNTDOWN */
 
 var eventDate = new Date("Mar 24, 2026 09:00:00").getTime();
