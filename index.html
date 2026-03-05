@@ -1283,6 +1283,69 @@ width:240px;
 }
 
 }
+#nav-menu a{
+text-decoration:none;
+color:white;
+margin:0 15px;
+font-size:16px;
+}
+
+.register-btn{
+background:#ff3b3b;
+padding:8px 18px;
+border-radius:25px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.register-btn:hover{
+background:#ff1a1a;
+transform:scale(1.05);
+}
+
+.hero-buttons{
+margin-top:20px;
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+/* Explore Button */
+
+.explore-btn{
+background:#e6b84c;
+color:black;
+padding:12px 26px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.explore-btn:hover{
+background:#d4a73d;
+transform:scale(1.05);
+}
+
+/* Download Brochure Button */
+
+.brochure-btn{
+background:transparent;
+border:2px solid #e6b84c;
+color:#e6b84c;
+padding:12px 26px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.brochure-btn:hover{
+background:#e6b84c;
+color:black;
+transform:scale(1.05);
+}
 
 </style>
 </head>
@@ -1315,7 +1378,11 @@ Saint Mary's Syrian College, Brahmavar
 
 <a href="#coordinators">Contact</a>
 
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfp0p9o4JUc-BgWRm4ACd5jvPA3L2dMaLb1TJydh3SJJwe8aQ/viewform?usp=header" class="register-btn">Register Now</a>
+
 </nav>
+
+</header>
 
 </header>
 
@@ -1329,7 +1396,13 @@ Saint Mary's Syrian College, Brahmavar
 <span>THILLANA</span>
 </h1>
 <p>A Celebration of Culture, Creativity and Performance</p>
-<a href="#events" class="btn">Explore Events</a>
+<div class="hero-buttons">
+
+<a href="#events" class="explore-btn">Explore Events</a>
+
+<a href="brochure.pdf" download class="brochure-btn">Download Brochure</a>
+
+</div>
 </div>
 
 </section>
