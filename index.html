@@ -473,114 +473,44 @@ height:100px;
 
 }
 
-
-/* GALLERY */
-
 .gallery{
+padding:80px 20px;
+text-align:center;
+}
 
-overflow:hidden;
+.gallery h2{
+color:#f2c94c;
+margin-bottom:40px;
+font-size:32px;
+}
 
-max-width:1100px;
+/* GRID */
 
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+max-width:1200px;
 margin:auto;
+}
 
-border:2px solid gold;
+/* IMAGES */
 
+.gallery-grid img{
+width:100%;
+height:180px;
+object-fit:cover;
 border-radius:10px;
-
-padding:15px;
-
-background:#111;
-
-}
-
-/* GALLERY TRACK */
-
-.gallery-track{
-
-display:flex;
-
-gap:20px;
-
-animation:scrollGallery 35s linear infinite;
-
-align-items:center;
-
-}
-
-.gallery-track:hover{
-
-animation-play-state:paused;
-
-}
-
-/* GALLERY IMAGE */
-
-.gallery-track img{
-
-height:220px;
-
-border-radius:8px;
-
-border:2px solid gold;
-
+border:2px solid #f2c94c;
 transition:0.3s;
-
 }
 
-.gallery-track img:hover{
+/* hover */
 
+.gallery-grid img:hover{
 transform:scale(1.05);
-
+box-shadow:0 0 10px #f2c94c;
 }
-
-/* MOBILE GALLERY */
-
-@media (max-width:768px){
-
-.gallery-track img{
-
-height:150px;
-
-}
-
-}
-
-/* SMALL MOBILE */
-
-@media (max-width:480px){
-
-.gallery-track img{
-
-height:120px;
-
-}
-
-}
-
-/* GALLERY ANIMATION */
-
-@keyframes scrollGallery{
-
-0%{
-transform:translateX(0);
-}
-
-100%{
-transform:translateX(-50%);
-}
-
-}
-
-/* GALLERY ANIMATION */
-
-@keyframes scrollGallery{
-
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
-
-}
-
 /* MODAL */
 
 .modal{
@@ -1750,46 +1680,29 @@ allowfullscreen>
 </section>
 
 <section class="gallery">
+<section class="gallery">
 
 <h2>Event Gallery</h2>
 
-<div class="gallery-slider">
-
-<div class="gallery-track">
+<div class="gallery-grid">
 
 <img src="images/g1.jpg">
 <img src="images/g2.jpg">
 <img src="images/g3.jpg">
 <img src="images/g4.jpg">
+
 <img src="images/g5.jpg">
 <img src="images/g6.jpg">
 <img src="images/g7.jpg">
 <img src="images/g8.jpg">
+
 <img src="images/g9.jpg">
 <img src="images/g10.jpg">
 <img src="images/g11.jpg">
 <img src="images/g12.jpg">
+
 <img src="images/g13.jpg">
 <img src="images/g14.jpg">
-
-<!-- duplicate for smooth infinite animation -->
-
-<img src="images/g1.jpg">
-<img src="images/g2.jpg">
-<img src="images/g3.jpg">
-<img src="images/g4.jpg">
-<img src="images/g5.jpg">
-<img src="images/g6.jpg">
-<img src="images/g7.jpg">
-<img src="images/g8.jpg">
-<img src="images/g9.jpg">
-<img src="images/g10.jpg">
-<img src="images/g11.jpg">
-<img src="images/g12.jpg">
-<img src="images/g13.jpg">
-<img src="images/g14.jpg">
-
-</div>
 
 </div>
 
