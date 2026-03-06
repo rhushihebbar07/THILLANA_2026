@@ -279,28 +279,113 @@ margin:auto;
 
 }
 
-/* PRIZES */
+/* PRIZES SECTION */
 
 .prizes{
 
 display:flex;
 justify-content:center;
-gap:30px;
+align-items:stretch;
 flex-wrap:wrap;
+
+gap:30px;
+margin-top:30px;
+
+}
+
+/* PRIZE CARD */
+
+.prize-card{
+
+background:linear-gradient(145deg,#111,#1a1a1a);
+
+padding:25px 20px;
+
+border-radius:12px;
+
+border:1px solid gold;
+
+width:230px;
+
+text-align:center;
+
+transition:all 0.35s ease;
+
+box-shadow:0 0 8px rgba(212,175,55,0.3);
+
+}
+
+/* TITLE */
+
+.prize-card h3{
+
+color:#f7d774;
+margin-bottom:10px;
+font-size:20px;
+
+}
+
+/* TEXT */
+
+.prize-card p{
+
+color:#ddd;
+font-size:15px;
+
+}
+
+/* HOVER EFFECT */
+
+.prize-card:hover{
+
+transform:translateY(-8px) scale(1.03);
+
+box-shadow:0 0 25px rgba(212,175,55,0.7);
+
+border-color:#ffd700;
+
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+.prize-card{
+
+width:200px;
+
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.prizes{
+
+gap:15px;
 
 }
 
 .prize-card{
 
-background:#151515;
+width:160px;
+padding:18px;
 
-padding:25px;
+}
 
-border-radius:10px;
+.prize-card h3{
 
-border:1px solid gold;
+font-size:16px;
 
-width:220px;
+}
+
+.prize-card p{
+
+font-size:13px;
+
+}
 
 }
 
@@ -1556,24 +1641,26 @@ Saint Mary's Syrian College, Brahmavar
 </section>
 <!-- PRIZE -->
 
+<!-- OVERALL PRIZES -->
+
 <section>
 
-<h2>Prize Money</h2>
+<h2>Overall Championship Prizes</h2>
 
 <div class="prizes">
 
 <div class="prize-card">
-<h3>1st Prize</h3>
+<h3>🥇 1st Prize</h3>
 <p>₹13,333 + Trophy</p>
 </div>
 
 <div class="prize-card">
-<h3>2nd Prize</h3>
+<h3>🥈 2nd Prize</h3>
 <p>₹11,111 + Trophy</p>
 </div>
 
 <div class="prize-card">
-<h3>3rd Prize</h3>
+<h3>🥉 3rd Prize</h3>
 <p>₹9,999 + Trophy</p>
 </div>
 
@@ -1581,6 +1668,55 @@ Saint Mary's Syrian College, Brahmavar
 
 </section>
 
+
+
+<!-- CATEGORY-WISE BEST PERFORMANCE -->
+
+<section>
+
+<h2>Category-Wise Best Performance</h2>
+<p>(1st & 2nd Place Awards)</p>
+
+<div class="prizes">
+
+<div class="prize-card">
+<h3>Dance / Music</h3>
+<p>🏆 Best Performance I & II</p>
+</div>
+
+<div class="prize-card">
+<h3>Acting / Expression</h3>
+<p>🏆 Best Performance I & II</p>
+</div>
+
+<div class="prize-card">
+<h3>Creative Brilliance</h3>
+<p>🏆 Best Performance I & II</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SPECIAL AWARDS -->
+
+<section>
+
+<h2>Special Awards</h2>
+
+<div class="prizes">
+
+<div class="prize-card">
+<h3>Best M.C.</h3>
+<p>🎤 Trophy</p>
+<p>Honoring the most engaging and dynamic host of the event</p>
+</div>
+
+</div>
+
+</section>
 <!-- NOTICE -->
 
 <section>
